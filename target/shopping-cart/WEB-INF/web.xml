@@ -1,0 +1,62 @@
+<web-app id="WebApp_ID" version="2.4"
+ xmlns="http://java.sun.com/xml/ns/j2ee"
+ xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+ xsi:schemaLocation="http://java.sun.com/xml/ns/j2ee
+ http://java.sun.com/xml/ns/j2ee/web-app_2_4.xsd">
+  <display-name>sample Web Application</display-name>
+  
+  <servlet>
+    <servlet-name>HelloWorld</servlet-name>
+    <servlet-class>com.cubic.web.servlet.HelloWorldServlet</servlet-class>
+  </servlet>
+  
+  <servlet>
+  	<servlet-name>LoginServlet</servlet-name>
+  	<servlet-class>com.cubic.web.servlet.LoginServlet</servlet-class>
+  </servlet>
+  <servlet>
+  	<servlet-name>ItemListServlet</servlet-name>
+  	<servlet-class>com.cubic.web.servlet.ItemListServlet</servlet-class>
+  </servlet>
+  
+    <servlet>
+  	<servlet-name>HelloWorldServlet</servlet-name>
+  	<servlet-class>com.cubic.web.servlet.HelloWorldServlet</servlet-class>
+  </servlet>
+   <servlet>
+  	<servlet-name>AddToCartServlet</servlet-name>
+  	<servlet-class>com.cubic.web.servlet.AddToCartServlet</servlet-class>
+  </servlet>
+ 
+  
+  <servlet-mapping>
+  	<servlet-name>LoginServlet</servlet-name>
+  	<url-pattern>/login</url-pattern>
+  </servlet-mapping>
+  
+  <servlet-mapping>
+  	<servlet-name>ItemListServlet</servlet-name>
+  	<url-pattern>/list</url-pattern>
+  </servlet-mapping>
+  
+  <servlet-mapping>
+    <servlet-name>AddToCartServlet</servlet-name>
+    <url-pattern>/AddToCartServlet</url-pattern>
+  </servlet-mapping>
+  
+  <servlet-mapping>
+    <servlet-name>HelloWorld</servlet-name>
+    <url-pattern>/hello</url-pattern>
+  </servlet-mapping>
+  
+  
+  <session-config>
+  <session-timeout>10</session-timeout>
+  </session-config>
+ 
+  
+  <welcome-file-list>
+   <welcome-file>/WEB-INF/LoginForm.jsp</welcome-file>
+ </welcome-file-list>
+  
+  </web-app>
